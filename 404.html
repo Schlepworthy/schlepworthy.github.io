@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrong turn | Schlepworthy</title>
+<meta name="description" content="This page isn't here. The weekend list is.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Schlepworthy">
+<meta property="og:title" content="Wrong turn | Schlepworthy">
+<meta property="og:description" content="This page isn't here. The weekend list is.">
+<meta name="theme-color" content="#0E4A33">
+<meta name="robots" content="noindex">
+<meta property="og:image" content="https://schlepworthy.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://schlepworthy.com/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ultra&amp;family=Bricolage+Grotesque:opsz,wght@12..96,300..800&amp;family=DM+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="cover">
+  <div class="sw-awning" aria-hidden="true"></div>
+  <div class="wrap site-cover site-cover--small">
+    <p class="eyebrow"><span class="sign"><b>Wrong turn</b></span></p>
+    <a href="/" style="text-decoration:none"><p class="sw-masthead"><span>Schlep</span><span>worthy</span></p></a>
+  </div>
+</header>
+<main class="wrap lost">
+  <h1 class="section-title">That page isn't here.</h1>
+  <p>Not worth the schlep. The weekend list is, though.</p>
+  <p><a class="btn btn--ink" href="/">Back to the home page</a></p>
+  <p><a class="js-sub" href="https://schlepworthy.beehiiv.com/?utm_source=website&amp;utm_medium=owned&amp;utm_campaign=404" target="_blank" rel="noopener">Or get it free every Thursday &rarr;</a></p>
+</main>
+<footer class="wrap site-foot">
+  <span>&copy; 2026 Schlepworthy &middot; Weekends from the Crystal City Metro</span>
+  <span><a href="/">Home</a> &middot; <a href="/archive/">Archive</a> &middot; <a class="js-sub" href="https://schlepworthy.beehiiv.com/?utm_source=website&amp;utm_medium=owned&amp;utm_campaign=footer" target="_blank" rel="noopener">Get it free</a></span>
+</footer>
+<script>
+(function () {
+  /* Carry a visitor's utm_* tags onto the subscribe links, so a Reddit or Instagram link to this page still credits the signup in Beehiiv. */
+  try {
+    var q = new URLSearchParams(window.location.search);
+    if (!q.get("utm_source")) return;
+    Array.prototype.forEach.call(document.querySelectorAll("a.js-sub"), function (a) {
+      var u = new URL(a.href);
+      ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach(function (k) {
+        var v = q.get(k);
+        if (v) { u.searchParams.set(k, v); } else { u.searchParams.delete(k); }
+      });
+      a.href = u.toString();
+    });
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

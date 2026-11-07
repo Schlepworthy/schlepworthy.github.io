@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><clipPath id="r"><rect width="64" height="64" rx="14"/></clipPath></defs>
+  <g clip-path="url(#r)">
+    <rect width="64" height="64" fill="#0E4A33"/>
+    <rect x="0" y="0" width="64" height="13" fill="#F7F7F2"/>
+    <path d="M0 0h8v13H0zM16 0h8v13h-8zM32 0h8v13h-8zM48 0h8v13h-8z" fill="#B8521A"/>
+    <path d="M0 13a4 4 0 0 0 8 0zM16 13a4 4 0 0 0 8 0zM32 13a4 4 0 0 0 8 0zM48 13a4 4 0 0 0 8 0z" fill="#B8521A"/>
+    <path d="M8 13a4 4 0 0 0 8 0zM24 13a4 4 0 0 0 8 0zM40 13a4 4 0 0 0 8 0zM56 13a4 4 0 0 0 8 0z" fill="#F7F7F2"/>
+    <text x="32" y="55" text-anchor="middle" font-family="Ultra, 'Rockwell Extra Bold', Rockwell, Georgia, serif" font-size="38" font-weight="700" fill="#B8521A">S</text>
+    <text x="30.5" y="53.5" text-anchor="middle" font-family="Ultra, 'Rockwell Extra Bold', Rockwell, Georgia, serif" font-size="38" font-weight="700" fill="#F7F7F2">S</text>
+  </g>
+</svg>
