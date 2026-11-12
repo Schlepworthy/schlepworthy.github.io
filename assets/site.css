@@ -916,7 +916,8 @@ a.item__name::after { content: " ↗"; font-family: var(--font-mono); font-size:
 .sw-def div { display: grid; gap: 1px; }
 .sw-def dt { font-size: 1rem; }
 .sw-def dt b { font-weight: 800; }
-.sw-def dt i, .sw-def dd i { color: var(--ink-soft); }
+/* Bricolage has no italic, so the browser slanted it. The dictionary card's italics are real DM Mono Italic. */
+.sw-def dt i, .sw-def dd i { font-family: var(--font-mono); font-style: italic; font-weight: 400; font-size: 0.88em; color: var(--ink-soft); }
 .sw-def__say { font-family: var(--font-mono); font-size: 0.85rem; color: var(--ink-soft); }
 .sw-def dd { margin: 0; font-size: 0.95rem; line-height: 1.4; }
 .sw-tagline { margin-top: 14px; font-size: var(--step-1); line-height: 1.4; max-width: 32ch; }
@@ -992,7 +993,7 @@ a.item__name::after { content: " ↗"; font-family: var(--font-mono); font-size:
 }
 .crowd:hover { border-color: var(--ink); }
 .crowd[aria-pressed="true"] { background: var(--tomato); border-color: var(--tomato); color: var(--on-tomato); }
-.crowd__n { font-family: var(--font-mono); font-size: 0.75rem; opacity: 0.75; }
+.crowd__n { font-family: var(--font-mono); font-weight: 500; font-size: 0.75rem; opacity: 0.75; } /* DM Mono stops at 500: never inherit the button's bold */
 .crowd-note { font-size: 0.9rem; color: var(--ink-soft); }
 
 /* Rubber-stamp verdict */
@@ -1041,6 +1042,21 @@ a.item__name::after { content: " ↗"; font-family: var(--font-mono); font-size:
   text-transform: uppercase;
 }
 .polaroid figcaption { margin-top: 12px; font-family: var(--font-display); font-size: 1rem; color: #16211B; text-align: center; }
+.polaroid__photo--img { padding: 0; background: none; }
+.polaroid__photo--img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.pick-facts { margin-top: 10px; font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.5; letter-spacing: 0.02em; }
+
+/* Section nav: the row runs edge to edge, pills snap into place and fade out at the sides
+   instead of being sliced off flat (Jon, Nov. 9). */
+.toc .wrap { padding-left: 0; padding-right: 0; }
+.toc__list {
+  padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px));
+  scroll-padding-inline: 16px;
+  scroll-snap-type: x proximity;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 16px, #000 calc(100% - 24px), transparent 100%);
+}
+.toc__list li { flex: none; scroll-snap-align: start; }
 
 /* Blue Plate Special receipt */
 .economy {
@@ -1062,7 +1078,7 @@ a.item__name::after { content: " ↗"; font-family: var(--font-mono); font-size:
 .fare__what small { display: block; color: var(--ink-soft); font-size: 0.85rem; }
 .fare__amt { font-family: var(--font-mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 .fare__total { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-top: 10px; border-top: 2px solid var(--ink); font-weight: 800; font-size: var(--step-1); }
-.fare__total span:last-child { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: var(--step-2); color: var(--tomato-text); }
+.fare__total span:last-child { font-family: var(--font-mono); font-weight: 500; font-variant-numeric: tabular-nums; font-size: var(--step-2); color: var(--tomato-text); }
 .fare__sum { margin-top: -6px; text-align: right; font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
 .economy__note { font-size: 0.9rem; color: var(--ink-soft); }
 
