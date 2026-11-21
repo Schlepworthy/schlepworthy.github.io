@@ -943,6 +943,12 @@ a.item__name::after { content: " ↗"; font-family: var(--font-mono); font-size:
 .sw-def__say { font-family: var(--font-mono); font-size: 0.85rem; color: var(--ink-soft); }
 .sw-def dd { margin: 0; font-size: 0.95rem; line-height: 1.4; }
 .sw-tagline { margin-top: 14px; font-size: var(--step-1); line-height: 1.4; max-width: 32ch; }
+/* Signup up top (Nov. 20, 2026): 187 visits landed on No. 3 in a day and the only signup sat on the back page.
+   The cover button matches the home page's .btn; the section nav leads with a filled pill that stays in reach while scrolling. */
+.sw-cta { display: inline-flex; align-items: center; justify-content: center; width: fit-content; margin-top: 18px; padding: 13px 22px; border-radius: 999px; background: var(--mustard); color: #16211B; font-weight: 800; font-size: 1.05rem; line-height: 1.2; text-decoration: none; box-shadow: 0 0 0 3px #F7F7F2, 0 8px 18px rgba(0, 0, 0, 0.25); }
+.sw-cta:hover { transform: translateY(-1px); }
+.toc a.toc__sub { background: var(--awning); border-color: var(--awning); color: var(--awning-ink); }
+.toc a.toc__sub:hover { border-color: var(--mustard); }
 .cover .coverlines a { color: var(--awning-ink); text-decoration-color: var(--mustard); }
 .cover .coverlines li::before { color: var(--mustard); }
 .cover .forecast__note { color: var(--awning-ink); opacity: 0.9; }
@@ -1163,6 +1169,7 @@ body { padding-bottom: env(safe-area-inset-bottom, 0px); }
         <div><dt><b>schlep&middot;worthy</b> <i>adjective</i></dt><dd>Worth the trip.</dd></div>
       </dl>
       <p class="sw-tagline">Only what's worth the schlep this weekend, measured from the Crystal City Metro.</p>
+      <a class="sw-cta js-sub" href="https://schlepworthy.beehiiv.com/?utm_source=website&amp;utm_medium=owned&amp;utm_campaign=no-3-top" target="_blank" rel="noopener">Get it free every Thursday</a>
     </div>
     <div class="cover__stickers" aria-hidden="true">
       <span class="sticker" style="--tilt: -7deg"><svg viewBox="0 0 64 64">
@@ -1225,6 +1232,7 @@ body { padding-bottom: env(safe-area-inset-bottom, 0px); }
 <nav class="toc" aria-label="Sections">
   <div class="wrap">
     <ul class="toc__list">
+      <li><a class="toc__sub js-sub" href="https://schlepworthy.beehiiv.com/?utm_source=website&amp;utm_medium=owned&amp;utm_campaign=no-3-nav" target="_blank" rel="noopener">Get it free</a></li>
       <li><a href="#pick"><span class="dot" style="--c: var(--tomato)"></span>Pick one</a></li>
       <li><a href="#friday"><span class="dot" style="--c: var(--orange)"></span>Friday</a></li>
       <li><a href="#saturday"><span class="dot" style="--c: var(--green)"></span>Saturday</a></li>
